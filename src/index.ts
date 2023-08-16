@@ -67,6 +67,7 @@ const defaultConfig: PluginConfig = {
 		path: 'assets/images'
 	}
 };
+
 export default function svgSprite(astroConfig: PluginConfig = {}): AstroIntegration {
 	const mergedConfig: PluginConfig = { ...defaultConfig, ...astroConfig };
 	return {
