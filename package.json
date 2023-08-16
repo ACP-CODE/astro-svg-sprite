@@ -1,0 +1,50 @@
+{
+  "name": "@astrojs/svg-sprite",
+  "version": "0.8.21",
+  "description": "This is a zero-dependency Astro Integration that generates a `sprite.svg` from SVG files in your Astro project.",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "clear": "rm -rf ./dist",
+    "build": "npm run clear && at-scripts create-pkg-name && at-scripts build && tsc -p tsconfig.build.json && at-scripts copy index.d.ts"
+  },
+  "keywords": [
+    "withastro",
+    "astro-integration",
+    "astro",
+    "astro-component",
+    "astro-sprite-component",
+    "sprite",
+    "genertate sprite.svg",
+    "sprite svg",
+    "svg-sprite",
+    "SVG Sprite",
+    "spriter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ACP-CODE/astro-svg-sprite.git"
+  },
+  "author": "Junlin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ACP-CODE/astro-svg-sprite/issues"
+  },
+  "homepage": "https://github.com/ACP-CODE/astro-svg-sprite#readme",
+  "devDependencies": {
+    "astro": "^2.10.5",
+    "at-scripts": "file:scripts/at-scripts-0.0.4.tgz"
+  },
+  "peerDependencies": {
+    "astro": "^2.0.0-beta.0"
+  }
+}
