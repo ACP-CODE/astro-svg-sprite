@@ -1,4 +1,4 @@
-# astro-svg-sprite
+# astro-svg-sprite ⚗️
 
 This is a zero-dependency [Astro Integration](https://docs.astro.build/en/guides/integrations-guide/) that generates a `sprite.svg` from SVG files in your Astro project.
 
@@ -6,25 +6,12 @@ This is a zero-dependency [Astro Integration](https://docs.astro.build/en/guides
 
 ## Installation
 
-### Quick Install
-
-The `astro add` command-line tool automates the installation for you. Run one of the following commands in a new terminal window. (If you aren't sure which package manager you're using, run the first command.) Then, follow the prompts, and type `"y"` in the terminal (meaning "yes") for each one.
-
-```dash
-## Using NPM
-npx astro add astro-svg-sprite
-# Using Yarn
-yarn astro add astro-svg-sprite
-# Using PNPM
-pnpm astro add astro-svg-sprite
-```
-
-### Manual Install
+## Manual Install
 
 First, install the `astro-svg-sprite` package using your package manager. If you're using npm or aren't sure, run this in the terminal:
 
 ```dash
-npm install astro-svg-sprite
+npm install astro-svg-sprite -D
 ```
 
 Then, apply this integration to your astro.config.\* file using the integrations property:
@@ -39,6 +26,24 @@ export default defineConfig({
   integrations: [svgSprite()],
 });
 ```
+
+Then store the SVG file you want to generate sprite.svg in the `/src/assets/images/sprite` directory, it will automatically generate sprite.svg for you and store it in `/public/assets/images`. More flexible configuration to participate in [usage](#usage).
+
+### Quick Install
+
+The `astro add` command-line tool automates the installation for you.
+
+```dash
+# Using NPM
+npx astro add astro-svg-sprite
+
+# Using Yarn
+yarn astro add astro-svg-sprite
+
+# Using PNPM
+pnpm astro add astro-svg-sprite
+```
+
 
 ## Usage
 
@@ -59,45 +64,14 @@ import svgSprite from "astro-svg-sprite";
 export default defineConfig({
   // ...
   integrations: [
+    // See JSDoc for more usage guidelines.
+    // When you install you can get the configuration information you want.
     svgSprite({
-      /**
-       * @type { string | string[] }
-       * @default `./src/assets/images/sprite`
-       * @description
-       * The directory where the SVG files are located, used to generate `sprite.svg` file.
-       */
-      include: "./src/assets/images/sprite",
-      /**
-       * @value 'verbose' | 'quiet'
-       * @default `verbose`
-       * @description
-       * Show or hide log information
-       */
-      mode: "verbose",
-      /**
-       * @type { boolean | Object }
-       * @default `true`
-       * @description
-       * Generate `sprite.svg` default, otherwise inline the sprite into the webpage.
-       */
+      include: "./src/assets/images/sprite", // string | string[]
+      mode: "verbose", // `verbose` or `quiet`
       emitFile: {
-        /**
-         * @value 'storage' | 'fast' | 'standard' | 'best'
-         * @default 'standard'
-         * @description
-         * Compression level for the sprite code.
-         * - `storage`: No compression applied, the sprite code remains as-is.
-         * - `fast`: Apply fast compression to reduce file size with acceptable performance.
-         * - `standard`: Apply standard compression for a balance between file size and compression time (default).
-         * - `best`: Apply the best compression to achieve the smallest file size, but with potentially longer compression time.
-         */
-        compress: "standard",
-        /**
-         * @default `assets/images` relative ./public, real path `./public/assets/images`
-         * @description
-         * The directory where the generated `sprite.svg` file will be stored.
-         */
-        path: "assets/images",
+        compress: "standard", // 'storage' | 'fast' | 'standard' | 'best';
+        path: "assets/images", // relative path ‘./public'
       },
     }),
   ],
@@ -105,7 +79,7 @@ export default defineConfig({
 ``;
 ```
 
-> **Supplementary Note:** `svgSprite.emitFile.compress` recommends using the default `standard` mode. The best mode will convert some svg tags into path tags.
+> **Note:** `svgSprite.emitFile.compress` recommends using the default `standard` mode. The best mode will convert some svg tags into path tags.
 
 I'm considering whether to add the path merging function in the future, because it may bring about visual changes and other flexible features.
 
