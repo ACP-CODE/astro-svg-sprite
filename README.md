@@ -76,7 +76,6 @@ export default defineConfig({
     }),
   ],
 });
-``;
 ```
 
 > **Note:** `svgSprite.emitFile.compress` recommends using the default `standard` mode. The best mode will convert some svg tags into path tags.
