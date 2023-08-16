@@ -6,7 +6,7 @@ This is a zero-dependency [Astro Integration](https://docs.astro.build/en/guides
 
 ## Installation
 
-## Manual Install
+### Manual Install
 
 First, install the `astro-svg-sprite` package using your package manager. If you're using npm or aren't sure, run this in the terminal:
 
