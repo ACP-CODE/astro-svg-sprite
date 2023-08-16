@@ -29,6 +29,32 @@ export default defineConfig({
 
 Then store the SVG file you want to generate sprite.svg in the `/src/assets/images/sprite` directory, it will automatically generate sprite.svg for you and store it in `/public/assets/images`. More flexible configuration to participate in [usage](#usage).
 
+To use the `sprite.svg` file, you can make `components/Sprite.astro` like this.
+
+```astro
+---
+export interface props {
+  name: string;
+}
+
+const { class:className, name } = Astro.props;
+---
+<svg class={className}>
+  <use xlink:href=`${Astro.site}assets/images/sprite.svg#${name}`></use>
+</svg>
+```
+
+Then call the `Sprite.astro` component on other pages.
+
+```astro
+---
+import Sprite from 'components/Sprite.astro'
+---
+<Sprite name="fileName" class="customClassName"/>
+
+```
+May you like it.
+
 ### Quick Install
 
 The `astro add` command-line tool automates the installation for you.
