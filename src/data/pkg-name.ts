@@ -1,2 +1,2 @@
 // @internal
-export const packageName = '@astrojs/svg-sprite';
+export const packageName = 'astro-svg-sprite';

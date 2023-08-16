@@ -1,4 +1,4 @@
-# @astrojs/svg-sprite
+# astro-svg-sprite
 
 This is a zero-dependency [Astro Integration](https://docs.astro.build/en/guides/integrations-guide/) that generates a `sprite.svg` from SVG files in your Astro project.
 
@@ -12,19 +12,19 @@ The `astro add` command-line tool automates the installation for you. Run one of
 
 ```dash
 ## Using NPM
-npx astro add svg-sprite
+npx astro add astro-svg-sprite
 # Using Yarn
-yarn astro add svg-sprite
+yarn astro add astro-svg-sprite
 # Using PNPM
-pnpm astro add svg-sprite
+pnpm astro add astro-svg-sprite
 ```
 
 ### Manual Install
 
-First, install the `@astrojs/svg-sprite` package using your package manager. If you're using npm or aren't sure, run this in the terminal:
+First, install the `astro-svg-sprite` package using your package manager. If you're using npm or aren't sure, run this in the terminal:
 
 ```dash
-npm install @astrojs/svg-sprite
+npm install astro-svg-sprite
 ```
 
 Then, apply this integration to your astro.config.\* file using the integrations property:
@@ -32,7 +32,7 @@ Then, apply this integration to your astro.config.\* file using the integrations
 ```js
 // astro.config.mjs
 import { defineConfig } from "astro/config";
-import svgSprite from "@astrojs/svg-sprite";
+import svgSprite from "astro-svg-sprite";
 
 export default defineConfig({
   // ...
@@ -54,7 +54,7 @@ This is the default configuration of the plugin. You can configure it yourself a
 ```js
 // astro.config.mjs
 import { defineConfig } from "astro/config";
-import svgSprite from "@astrojs/svg-sprite";
+import svgSprite from "astro-svg-sprite";
 
 export default defineConfig({
   // ...

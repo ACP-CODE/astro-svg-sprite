@@ -1,6 +1,6 @@
 {
-  "name": "@astrojs/svg-sprite",
-  "version": "0.8.20",
+  "name": "astro-svg-sprite",
+  "version": "0.8.21",
   "description": "This is a zero-dependency Astro Integration that generates a `sprite.svg` from SVG files in your Astro project.",
   "type": "module",
   "exports": {
