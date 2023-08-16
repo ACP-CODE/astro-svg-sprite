@@ -1,8 +1,13 @@
 # Changelog
 
-## 0.8.21-0.0.0
+## 0.8.21-0.2
+
+- Remove LICENSE file
+  
+## 0.8.21-0.1
 
 - Update README.md
+- Rebuild
   
 ## 0.8.21-0.0
 
