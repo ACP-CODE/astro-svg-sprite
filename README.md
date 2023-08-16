@@ -67,11 +67,11 @@ export default defineConfig({
     // See JSDoc for more usage guidelines.
     // When you install you can get the configuration information you want.
     svgSprite({
-      include: "./src/assets/images/sprite", // string | string[]
-      mode: "verbose", // `verbose` or `quiet`
+      include: "./src/assets/images/sprite",
+      mode: "verbose", 
       emitFile: {
-        compress: "standard", // 'storage' | 'fast' | 'standard' | 'best';
-        path: "assets/images", // relative path ‘./public'
+        compress: "standard", 
+        path: "assets/images",
       },
     }),
   ],
