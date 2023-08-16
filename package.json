@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "clear": "rm -rf ./dist",
-    "build": "npm run clear && at-scripts create-pkg-name && at-scripts build && tsc -p tsconfig.build.json && at-scripts copy index.d.ts"
+    "build": "npm run clear && at-scripts create-pkg-name && at-scripts build && tsc -p tsconfig.build.json"
   },
   "keywords": [
     "withastro",
