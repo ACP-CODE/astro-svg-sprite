@@ -2,7 +2,7 @@
 
 This is a zero-dependency [Astro Integration](https://docs.astro.build/en/guides/integrations-guide/) that generates a `sprite.svg` from SVG files in your Astro project.
 
-> This integration supports Astro 2.0 and Above.
+> The package depends on the Integrations API of Astro 2.0 and above
 
 ## Installation
 
@@ -27,7 +27,7 @@ export default defineConfig({
 });
 ```
 
-Then store the SVG file you want to generate sprite.svg in the `/src/assets/images/sprite` directory, it will automatically generate sprite.svg for you and store it in `/public/assets/images`. More flexible configuration to participate in [usage](#usage).
+Then store the SVG file you want to generate `sprite.svg` in the `/src/assets/images/sprite` directory, it will automatically generate `sprite.svg` for you and store it in `/public/assets/images`. More flexible configuration to participate in [usage](#usage).
 
 To use the `sprite.svg` file, you can make `components/Sprite.astro` like this.
 
@@ -53,7 +53,6 @@ import Sprite from 'components/Sprite.astro'
 <Sprite name="fileName" class="customClassName"/>
 
 ```
-May you like it.
 
 ### Quick Install
 
@@ -70,16 +69,15 @@ yarn astro add astro-svg-sprite
 pnpm astro add astro-svg-sprite
 ```
 
-
 ## Usage
 
-This is the default configuration of the plugin. You can configure it yourself according to JSDoc.
+This is the default configuration of the plugin. You can configure it yourself according to [JSDoc](./dist/index.d.ts).
 
-> **Note:** `emitFile:false` use with caution.
+> **⚠ CAUTION:** `emitFile:false` use with caution.
 > 
-> The current the option just inserts the sprite.svg code into the page through javascript.
+> The current the option just inserts the `sprite.svg` code into the page `<body>` through `javascript`.
 >
-> 1. In order to improve the user experience, I hope to support direct insertion `sprite code` into the page `<body>` tag in the future.
+> 1. In order to improve the user experience, I hope to support direct insertion `sprite.svg` code into the page `<body>` tag in the future.
 > 2. I don't know which official API or better way to do this so far.
 
 ```js
