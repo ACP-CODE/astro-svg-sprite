@@ -5,8 +5,6 @@ import { parseSvgs, generateSprite, optimizeSvgContent, writeFile, printFileStat
 import { getEntryPath, getOutputPath } from './paths';
 import { hasSvgFilesInDirectory } from './utils';
 
-type EntryType = string | string[];
-
 export interface PluginConfig {
 	/**
 	* @docs
@@ -24,7 +22,7 @@ export interface PluginConfig {
 	 * @description
 	 * The directory where the SVG files are located, used to generate `sprite.svg` file.
 	 */
-	include?: EntryType;
+	include?: string | string[];
 	/**
 	 * @docs
 	 * @name svgSprite.emitFile
