@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.8.21
+## 0.8.21-0.6
 
 - Update README.md
 - Remove LICENSE file
