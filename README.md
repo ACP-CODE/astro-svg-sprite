@@ -77,7 +77,6 @@ This is the default configuration of the plugin. You can configure it yourself a
 >
 > The current the option just inserts the `sprite.svg` code into the page `<body>` through `javascript`.
 
-
 ```js
 // astro.config.mjs
 import { defineConfig } from "astro/config";
