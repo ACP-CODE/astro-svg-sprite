@@ -76,9 +76,7 @@ This is the default configuration of the plugin. You can configure it yourself a
 > **⚠ CAUTION:** `emitFile:false` use with caution.
 >
 > The current the option just inserts the `sprite.svg` code into the page `<body>` through `javascript`.
->
-> 1. In order to improve the user experience, I hope to support direct insertion `sprite.svg` code into the page `<body>` tag in the future.
-> 2. I don't know which official API or better way to do this so far.
+
 
 ```js
 // astro.config.mjs
@@ -102,7 +100,7 @@ export default defineConfig({
 });
 ```
 
-> **Note:** `svgSprite.emitFile.compress` recommends using the default `standard` mode. The best mode will convert some svg tags into path tags.
+> **Note:** `svgSprite.emitFile.compress` recommends using the default `standard` mode. The `best` mode will convert some svg tags into path tags.
 
 I'm considering whether to add the path merging function in the future, because it may bring about visual changes and other flexible features.
 
