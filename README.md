@@ -74,7 +74,7 @@ pnpm astro add astro-svg-sprite
 This is the default configuration of the plugin. You can configure it yourself according to [JSDoc](./dist/index.d.ts).
 
 > **⚠ CAUTION:** `emitFile:false` use with caution.
-> 
+>
 > The current the option just inserts the `sprite.svg` code into the page `<body>` through `javascript`.
 >
 > 1. In order to improve the user experience, I hope to support direct insertion `sprite.svg` code into the page `<body>` tag in the future.
