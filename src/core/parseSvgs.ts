@@ -10,7 +10,7 @@ export default function parseSvgs(dir: string | string[]) {
   // 检查目录是否包含 SVG 文件
   if (!hasSvgFilesInDirectory(dir)) {
     const logger = new Logger(packageName);
-    logger.warn(` > No SVG files found in '${dir}' directory.`);
+    logger.warn(`Caution: No SVG files found in '${dir}' directory.`);
     return icons;
   }
 
@@ -36,7 +36,7 @@ export default function parseSvgs(dir: string | string[]) {
 
       // 检查 SVG 文件是否有效
       if (!isValidSvg(icon)) {
-        logger.warn(`In ${directory} '${filename}' is not a valid SVG file, please provide a standard SVG.`);
+        logger.error(`\x1b[38;5;246mError: In ${directory} '${filename}' is not a valid SVG file, please provide a standard SVG.`);
         return;
       }
 

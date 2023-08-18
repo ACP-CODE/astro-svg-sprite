@@ -1,4 +1,4 @@
-import type { AstroIntegration } from 'astro';
+import type { AstroConfig, AstroIntegration } from 'astro';
 
 import { packageName } from './data/pkg-name';
 import { parseSvgs, generateSprite, optimizeSvgContent, writeFile, printFileStats } from './core';
@@ -67,7 +67,28 @@ const defaultConfig: PluginConfig = {
 };
 
 export default function svgSprite(astroConfig: PluginConfig = {}): AstroIntegration {
+	let config: AstroConfig;
 	const mergedConfig: PluginConfig = { ...defaultConfig, ...astroConfig };
+	function emitFile() {
+		const startTime = process.hrtime();
+
+		const entry = getEntryPath(astroConfig.include);
+		const output = getOutputPath((astroConfig.emitFile as EmitFileOptions)?.path);
+		const filePath = `${config.publicDir.pathname}${output}/sprite.svg`;
+
+		const icons = parseSvgs(entry);
+		const sprite = optimizeSvgContent(generateSprite(icons), (mergedConfig.emitFile as EmitFileOptions)?.compress);
+
+		if (hasSvgFilesInDirectory(entry)) {
+			if (astroConfig.emitFile || mergedConfig.emitFile) {
+				writeFile(filePath, sprite);
+				if (mergedConfig.mode !== 'quiet') {
+					printFileStats(filePath, output, startTime);
+				}
+			}
+		}
+	}
+
 	return {
 		name: packageName,
 		hooks: {
@@ -79,27 +100,15 @@ export default function svgSprite(astroConfig: PluginConfig = {}): AstroIntegrat
 					injectScript('page', `document.body.insertAdjacentHTML("beforeend", "${sprite}")`)
 				}
 			},
-
-			'astro:config:done': async ({ config }) => {
-				const startTime = process.hrtime();
-
-				const entry = getEntryPath(astroConfig.include);
-				const output = getOutputPath((astroConfig.emitFile as EmitFileOptions)?.path);
-				const filePath = `${config.publicDir.pathname}${output}/sprite.svg`;
-
-				const icons = parseSvgs(entry);
-				const sprite = optimizeSvgContent(generateSprite(icons), (mergedConfig.emitFile as EmitFileOptions)?.compress);
-
-				if (hasSvgFilesInDirectory(entry)) {
-					if (astroConfig.emitFile || mergedConfig.emitFile) {
-						writeFile(filePath, sprite);
-						if (mergedConfig.mode !== 'quiet') {
-							printFileStats(filePath, output, startTime);
-						}
-					}
-				}
-
+			'astro:config:done': async ({ config: cfg }) => {
+				config = cfg;
 			},
+			'astro:server:start': () => {
+				emitFile();
+			},
+			'astro:build:start': () => {
+				emitFile();
+			}
 		},
 	};
 }

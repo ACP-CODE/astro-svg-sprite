@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.21-0.7
+
+- Update Logger.ts - Make the style closer to Astro style
+- Updated the driver logic
+  
 ## 0.8.21-0.6
 
 - Update README.md

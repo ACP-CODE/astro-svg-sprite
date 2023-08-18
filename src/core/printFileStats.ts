@@ -19,13 +19,9 @@ export default function printFileStats(filePath: string, outputPath: string, sta
 
     // 泛统计生成 `sprite.svg` 耗时
     const endTime = process.hrtime(startTime);
-    const executionTime = (endTime[0] * 1e9 + endTime[1]) / 1e6;
+    const executionTime = Math.floor((endTime[0] * 1e9 + endTime[1]) / 1e6);
 
-    logger.success(
-      `\x1b[33mgenerated in ${executionTime}ms\x1b[0m`,
-      ` > Emit '/public/${outputPath}'`,
-      ` > File 'sprite.svg' (${fileSizeInKilobytes} KB)`,
-    )
+    logger.success(`\x1b[32mgenerated\x1b[0m 'sprite.svg' (${fileSizeInKilobytes} KB) in ${executionTime}ms`)
 
   });
 }
