@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.21-0.8
+
+- Bug fix
+
 ## 0.8.21-0.7
 
 - Update Logger.ts - Make the style closer to Astro style

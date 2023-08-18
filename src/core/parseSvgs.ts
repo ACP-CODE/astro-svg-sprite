@@ -10,7 +10,7 @@ export default function parseSvgs(dir: string | string[]) {
   // 检查目录是否包含 SVG 文件
   if (!hasSvgFilesInDirectory(dir)) {
     const logger = new Logger(packageName);
-    logger.warn(`Caution: No SVG files found in '${dir}' directory.`);
+    logger.warn(`         \x1b[38;2;169;169;169mNo SVG files found in '${dir}' directory.\x1b[0m`);
     return icons;
   }
 
@@ -32,6 +32,9 @@ export default function parseSvgs(dir: string | string[]) {
   function parseSingleDirectory(directory: string) {
     fs.readdirSync(directory).forEach(filename => {
       const logger = new Logger(packageName);
+      if (!filename.toLowerCase().endsWith('.svg')) {
+        return;
+      }
       const icon = fs.readFileSync(`${directory}/${filename}`, 'utf-8');
 
       // 检查 SVG 文件是否有效

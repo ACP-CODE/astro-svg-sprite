@@ -56,29 +56,31 @@ export interface EmitFileOptions {
 	 */
 	path?: string;
 };
-
+const config: PluginConfig = {
+	emitFile: true,
+}
 const defaultConfig: PluginConfig = {
 	include: './src/assets/images/sprite',
 	mode: 'verbose',
 	emitFile: {
 		compress: 'standard',
 		path: 'assets/images'
-	}
+	} as EmitFileOptions,
+	...config,
 };
 
 export default function svgSprite(astroConfig: PluginConfig = {}): AstroIntegration {
 	let config: AstroConfig;
 	const mergedConfig: PluginConfig = { ...defaultConfig, ...astroConfig };
+
+	const startTime = process.hrtime();
+	const entry = getEntryPath(astroConfig.include);
+	const output = getOutputPath((astroConfig.emitFile as EmitFileOptions)?.path);
+	let filePath: string;
+	const icons = parseSvgs(entry);
+	const sprite = optimizeSvgContent(generateSprite(icons), (mergedConfig.emitFile as EmitFileOptions)?.compress);
+
 	function emitFile() {
-		const startTime = process.hrtime();
-
-		const entry = getEntryPath(astroConfig.include);
-		const output = getOutputPath((astroConfig.emitFile as EmitFileOptions)?.path);
-		const filePath = `${config.publicDir.pathname}${output}/sprite.svg`;
-
-		const icons = parseSvgs(entry);
-		const sprite = optimizeSvgContent(generateSprite(icons), (mergedConfig.emitFile as EmitFileOptions)?.compress);
-
 		if (hasSvgFilesInDirectory(entry)) {
 			if (astroConfig.emitFile || mergedConfig.emitFile) {
 				writeFile(filePath, sprite);
@@ -92,9 +94,9 @@ export default function svgSprite(astroConfig: PluginConfig = {}): AstroIntegrat
 	return {
 		name: packageName,
 		hooks: {
-			'astro:config:setup': ({ injectScript }) => {
+			'astro:config:setup': ({ config, injectScript }) => {
 				const entry = getEntryPath(astroConfig.include);
-				if (!astroConfig.emitFile) {
+				if (!astroConfig?.emitFile) {
 					const icons = parseSvgs(entry);
 					const sprite = optimizeSvgContent(generateSprite(icons), (mergedConfig.emitFile as EmitFileOptions)?.compress);
 					injectScript('page', `document.body.insertAdjacentHTML("beforeend", "${sprite}")`)
@@ -102,6 +104,7 @@ export default function svgSprite(astroConfig: PluginConfig = {}): AstroIntegrat
 			},
 			'astro:config:done': async ({ config: cfg }) => {
 				config = cfg;
+				filePath = `${config.publicDir.pathname}${output}/sprite.svg`;
 			},
 			'astro:server:start': () => {
 				emitFile();
