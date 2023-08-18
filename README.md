@@ -4,7 +4,7 @@ This is a zero-dependency [Astro Integration](https://docs.astro.build/en/guides
 
 > The package depends on the Integrations API of Astro 2.0 and above
 
-```dash
+```bash
 yarn run v1.22.19
 $ astro dev
   🚀  astro  v2.10.9 started in 1714ms
