@@ -4,6 +4,9 @@ This is a zero-dependency [Astro Integration](https://docs.astro.build/en/guides
 
 > The package depends on the Integrations API of Astro 2.0 and above
 
+<img width="566" alt="效果图" src="https://github.com/ACP-CODE/astro-svg-sprite/assets/3423524/60537af8-417a-4892-b9a7-10a24ba2fc38">
+
+
 ## Installation
 
 ### Manual Install
