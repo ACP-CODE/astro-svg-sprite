@@ -4,7 +4,10 @@ This is a zero-dependency [Astro Integration](https://docs.astro.build/en/guides
 
 > The package depends on the Integrations API of Astro 2.0 and above
 
-<div align=center><img width="682" alt="" src="https://github.com/ACP-CODE/astro-svg-sprite/assets/3423524/d35a6d43-7cb4-462b-a7f9-286de010081f"></div>
+<div align=center>
+  <img width="682" alt="" src="https://github.com/ACP-CODE/astro-svg-sprite/assets/3423524/146c94be-6420-4867-bb54-66be8f5fdaf0">
+</div>
+
 
 
 
