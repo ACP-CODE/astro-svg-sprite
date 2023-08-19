@@ -10,7 +10,6 @@ This is a zero-dependency [Astro Integration](https://docs.astro.build/en/guides
 
 
 
-
 ## Installation
 
 ### Manual Install
