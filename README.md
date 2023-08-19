@@ -4,17 +4,8 @@ This is a zero-dependency [Astro Integration](https://docs.astro.build/en/guides
 
 > The package depends on the Integrations API of Astro 2.0 and above
 
-```bash
-yarn run v1.22.19
-$ astro dev
-  🚀  astro  v2.10.9 started in 1714ms
-  
-  ┃ Local    http://localhost:3000/
-  ┃ Network  use --host to expose
-  
-18:51:51 [astro-svg-sprite] generated 'sprite.svg' (9.9951171875 KB) in 11ms
-18:51:51 [astro] update /public/assets/images/sprite.svg
-```
+<img width="682" alt="" src="https://github.com/ACP-CODE/astro-svg-sprite/assets/3423524/d35a6d43-7cb4-462b-a7f9-286de010081f">
+
 
 
 ## Installation
