@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.23
+
+- Update `package.json` for astro@3.0.3
+
 ## 0.8.21-0.8.1
 
 - Update README.md
