@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.8.24
+## 0.8.25
 
 - Update `package.json` for astro@3.0.3
 
