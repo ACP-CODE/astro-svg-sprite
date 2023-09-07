@@ -77,7 +77,7 @@ or
 ```sh
 npm run build
 ```
-<img width="621" alt="preview@2x" src="https://github.com/ACP-CODE/astro-svg-sprite/assets/3423524/ccb73a3a-588a-4a6c-91fc-288d00499dcd" width="100%">
+<img width="100%" alt="preview@2x" src="https://github.com/ACP-CODE/astro-svg-sprite/assets/3423524/ccb73a3a-588a-4a6c-91fc-288d00499dcd" >
 
 The generated `sprite.svg` file will be stored in the `public/assets/images` directory.
 
@@ -111,14 +111,6 @@ export default defineConfig({
   ],
 });
 ```
-
-Must be known.
-
-- `mode` - `vervose` `quite` Show or hide logger Info.
-- `include` - SVG files stored directories.
-- `emitFile.compress` - How sprite.svg file will be compressed to stored
-- `emitFile.path` - The sprite.svg will stored directory, relative the `public` directory.
-
 > **Note:** `emitFile.compress` recommends using the default `standard` mode. The `best` mode will convert some svg tags into path tags.
 
 </details>
