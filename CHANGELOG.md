@@ -1,28 +1,26 @@
 # Changelog
 
-## 0.8.25
+All notable changes to the Astro Integration `astro-svg-sprite` will be documented in this file.
 
-- Update `package.json` for astro@3.0.3
+## v1.0.0
 
-## 0.8.21-0.8.1
+### Major Changes
 
-- Update README.md
+- Added `measureExecutionTime` utils function
+- Added `printWarnInfo` core function
 
-## 0.8.21-0.8
+### Minor Changes
 
-- Bug fix
+- Removed and added new warning style
+- Changed execution logic of the main program
+- Adjusted JSDoc
 
-## 0.8.21-0.7
+### Patch Changes
 
-- Update Logger.ts - Make the style closer to Astro style
-- Updated the driver logic
-  
-## 0.8.21-0.6
+- Bringing logger's style closer to the Astro Design System
 
-- Update README.md
-- Remove LICENSE file
-- Add .npmignore
+## v0.8.21
 
-## 0.8.20
+### Patch Changes
 
-- Release the first version
+ - Add README across Astro built-in integrations

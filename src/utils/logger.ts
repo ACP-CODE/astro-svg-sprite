@@ -14,7 +14,7 @@ export class Logger implements ILogger {
       red: '\x1b[31m',
       green: '\x1b[32m',
       yellow: '\x1b[33m',
-      cyan: '\x1b[1m\x1b[36m'
+      cyanBold: '\x1b[1m\x1b[36m'
     },
   } as const;
 
@@ -26,32 +26,33 @@ export class Logger implements ILogger {
 
   private log(msg: string[], prefix: string = '') {
     const s = msg.join('\n');
-    // eslint-disable-next-line no-console
+
     const now = new Date();
     const hours = now.getHours().toString().padStart(2, '0');
     const minutes = now.getMinutes().toString().padStart(2, '0');
     const seconds = now.getSeconds().toString().padStart(2, '0');
+    const timeMsg = `\x1b[2m${hours}:${minutes}:${seconds}\x1b[22m`
 
     console.log(
-      `\x1b[38;2;169;169;169m${hours}:${minutes}:${seconds}\x1b[0m %s[${this.packageName}]%s ${s}`,
+      `${timeMsg} %s[${this.packageName}]%s ${s}`,
       prefix,
       prefix ? this.colors.reset : ''
     );
   }
 
   info(...msg: string[]) {
-    this.log(msg);
+    this.log(msg, this.colors.fg.cyanBold);
   }
 
   success(...msg: string[]) {
-    this.log(msg, this.colors.fg.cyan);
+    this.log(msg, this.colors.fg.cyanBold);
   }
 
   warn(...msg: string[]) {
-    this.log([`${this.colors.fg.yellow}Caution!${this.colors.reset}`, ...msg], this.colors.fg.cyan);
+    this.log([`${this.colors.fg.yellow}(!)${this.colors.reset} ${msg}`], this.colors.fg.cyanBold);
   }
 
   error(...msg: string[]) {
-    this.log([`${this.colors.fg.red}Failed!${this.colors.reset}`, ...msg], this.colors.fg.cyan);
+    this.log([`${this.colors.fg.red}failed!${this.colors.reset}`, ...msg], this.colors.fg.cyanBold);
   }
 }

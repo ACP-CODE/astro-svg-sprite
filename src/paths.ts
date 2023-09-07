@@ -2,7 +2,6 @@ import fs from 'node:fs';
 
 function getEntryPath(entry?: string | string[]) {
   const defaultPath = './src/assets/images/sprite';
-
   if (!entry || entry === '') {
     return defaultPath;
   } else if (typeof entry === 'string') {
@@ -13,7 +12,6 @@ function getEntryPath(entry?: string | string[]) {
       return nonEmptyPaths;
     }
   }
-
   return defaultPath;
 }
 

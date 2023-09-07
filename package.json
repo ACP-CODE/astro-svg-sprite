@@ -1,7 +1,7 @@
 {
   "name": "astro-svg-sprite",
-  "version": "0.8.25",
-  "description": "This is a zero-dependency Astro Integration that generates a `sprite.svg` from SVG files in your Astro project.",
+  "version": "1.0.0",
+  "description": "A zero-dependency Astro Integration that generates a `sprite.svg` from SVG files in your Astro project.",
   "type": "module",
   "exports": {
     ".": "./dist/index.js",
@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/ACP-CODE/astro-svg-sprite#readme",
   "devDependencies": {
-    "astro": "^2.10.5",
-    "at-scripts": "file:scripts"
+    "astro": "^2.10.3",
+    "typescript": "^5.2.2"
   }
 }

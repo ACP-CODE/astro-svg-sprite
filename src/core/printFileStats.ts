@@ -2,10 +2,12 @@ import fs from '../paths';
 
 import { packageName } from "../data/pkg-name";
 import { Logger } from "../utils/logger";
+const logger = new Logger(packageName);
 
-export default function printFileStats(filePath: string, outputPath: string, startTime: any) {
+import { executionTime } from '..';
+import printWarnInfo from './printWarnInfo';
 
-  const logger = new Logger(packageName);
+export default function printFileStats(filePath: string, outputPath: string) {
 
   fs.stat(filePath, (err, stats) => {
     if (err) {
@@ -13,15 +15,14 @@ export default function printFileStats(filePath: string, outputPath: string, sta
       return;
     }
 
-    // 计算 `sprite.svg` 文件大小
     const fileSizeInBytes = stats.size;
     const fileSizeInKilobytes = fileSizeInBytes / 1024;
 
-    // 泛统计生成 `sprite.svg` 耗时
-    const endTime = process.hrtime(startTime);
-    const executionTime = Math.floor((endTime[0] * 1e9 + endTime[1]) / 1e6);
+    logger.info(`\x1b[2mCompleted in ${executionTime}ms.\x1b[22m`);
 
-    logger.success(`\x1b[32mgenerated\x1b[0m 'sprite.svg' (${fileSizeInKilobytes} KB) in ${executionTime}ms`)
+    printWarnInfo();
+
+    logger.success(`\x1b[32mgenerated\x1b[0m 'sprite.svg' ${fileSizeInKilobytes}(kb).`);
 
   });
 }
