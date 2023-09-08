@@ -2,6 +2,13 @@
 
 All notable changes to the Astro Integration `astro-svg-sprite` will be documented in this file.
 
+## v1.0.1
+
+### Patch Changes
+
+- Update README file
+- Fixed warn info.
+
 ## v1.0.0
 
 ### Major Changes
@@ -23,4 +30,4 @@ All notable changes to the Astro Integration `astro-svg-sprite` will be document
 
 ### Patch Changes
 
- - Add README across Astro built-in integrations
+- Add README across Astro built-in integrations
