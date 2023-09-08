@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-<img height="142" alt="" src="./preview/logo.svg">
+<img height="142" alt="" src="./assets/logo.svg">
 </div>
 
 <h1 align="center">astro-svg-sprite</h1>
@@ -77,7 +77,8 @@ or
 ```sh
 npm run build
 ```
-<img width="100%" alt="" src="./preview/astro-svg-sprite.svg" >
+
+<img width="100%" alt="" src="./assets/astro-svg-sprite.svg" >
 
 The generated `sprite.svg` file will be stored in the `public/assets/images` directory.
 
@@ -111,6 +112,7 @@ export default defineConfig({
   ],
 });
 ```
+
 > **Note:** `emitFile.compress` recommends using the default `standard` mode. The `best` mode will convert some svg tags into path tags.
 
 </details>
