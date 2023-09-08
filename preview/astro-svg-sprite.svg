@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="680px" height="375px" viewBox="0 0 680 375" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>#@1x</title>
+    <g id="#" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="##">
+            <rect id="bg" fill="#282C34" x="0" y="0" width="680" height="375" rx="4"></rect>
+            <g id="code" transform="translate(21.000000, 23.000000)">
+                <rect id="parsed" fill="#8CC265" x="0" y="126" width="152" height="16"></rect>
+                <rect id="asto" fill="#8CC265" x="41" y="28" width="43" height="16"></rect>
+                <text id="text" font-family="Hack-Bold, Hack" font-size="12" font-weight="bold" line-spacing="14">
+                    <tspan x="5.58984375" y="11" fill="#ABB2BF">yarn run v1.22.19</tspan>
+                    <tspan x="128.408203" y="11" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
+                    <tspan x="5.58984375" y="25" font-family="Hack-Regular, Hack" font-weight="normal" fill="#6A6F7A">$ astro dev</tspan>
+                    <tspan x="85.0605469" y="25" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
+                    <tspan x="0" y="39" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF">  </tspan>
+                    <tspan x="19.7765625" y="36" font-family="AppleColorEmoji, Apple Color Emoji" font-weight="normal" fill="#ABB2BF">🚀</tspan>
+                    <tspan x="30.4492188" y="39" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF">  </tspan>
+                    <tspan x="44.8984375" y="39" font-family="Hack-Regular, Hack" font-weight="normal" fill="#282C34">astro  </tspan>
+                    <tspan x="95.4707031" y="39" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF">v2.10.3 </tspan>
+                    <tspan x="153.267578" y="39" font-family="Hack-Regular, Hack" font-weight="normal" fill="#6A6F7A">started in 3241ms</tspan>
+                    <tspan x="281.675781" y="39" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
+                    <tspan x="5.58984375" y="53" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF">  </tspan>
+                    <tspan x="5.58984375" y="67" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF">  ┃ Local    </tspan>
+                    <tspan x="99.5097656" y="67" fill="#4CD1E0">http://localhost:3000/</tspan>
+                    <tspan x="258.451172" y="67" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
+                    <tspan x="5.58984375" y="81" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF">  ┃ Network  </tspan>
+                    <tspan x="99.5097656" y="81" font-family="Hack-Regular, Hack" font-weight="normal" fill="#6A6F7A">use --host to expose</tspan>
+                    <tspan x="244.001953" y="81" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
+                    <tspan x="5.58984375" y="95" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF">  </tspan>
+                    <tspan x="5.58984375" y="109" font-family="Hack-Regular, Hack" font-weight="normal" fill="#6A6F7A">07:48:36</tspan>
+                    <tspan x="63.3867188" y="109" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"> </tspan>
+                    <tspan x="70.6113281" y="109" fill="#4CD1E0">[astro-svg-sprite]</tspan>
+                    <tspan x="200.654297" y="109" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"> </tspan>
+                    <tspan x="207.878906" y="109" font-family="Hack-Regular, Hack" font-weight="normal" fill="#6A6F7A">Completed in 3ms.</tspan>
+                    <tspan x="330.697266" y="109" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
+                    <tspan x="5.58984375" y="123" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
+                    <tspan x="5.58984375" y="137" font-family="Hack-Regular, Hack" font-weight="normal" fill="#282C34"> parsed 11 SVG files </tspan>
+                    <tspan x="157.306641" y="137" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
+                    <tspan x="5.58984375" y="151" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
+                    <tspan x="5.58984375" y="165" font-family="Hack-Regular, Hack" font-weight="normal" fill="#D08F52">(!) Please provide a standard svg files.</tspan>
+                    <tspan x="5.58984375" y="179" fill="#D08F52">files:</tspan>
+                    <tspan x="48.9375" y="179" font-family="Hack-Regular, Hack" font-weight="normal" fill="#D08F52"> [</tspan>
+                    <tspan x="5.58984375" y="193" font-family="Hack-Regular, Hack" font-weight="normal" fill="#282C34">  </tspan>
+                    <tspan x="20.0390625" y="193" font-family="Hack-Regular, Hack" font-weight="normal" fill="#D08F52">"./src/assets/images/3.svg",</tspan>
+                    <tspan x="5.58984375" y="207" font-family="Hack-Regular, Hack" font-weight="normal" fill="#282C34">  </tspan>
+                    <tspan x="20.0390625" y="207" font-family="Hack-Regular, Hack" font-weight="normal" fill="#D08F52">"./src/assets/images/4.svg"</tspan>
+                    <tspan x="5.58984375" y="221" font-family="Hack-Regular, Hack" font-weight="normal" fill="#D08F52">]</tspan>
+                    <tspan x="5.58984375" y="235" font-family="Hack-Regular, Hack" font-weight="normal" fill="#D08F52">   </tspan>
+                    <tspan x="27.2636719" y="235" fill="#D08F52">Not a valid SVG file.</tspan>
+                    <tspan x="178.980469" y="235" font-family="Hack-Regular, Hack" font-weight="normal" fill="#D08F52"></tspan>
+                    <tspan x="5.58984375" y="249" font-family="Hack-Regular, Hack" font-weight="normal" fill="#D08F52"></tspan>
+                    <tspan x="5.58984375" y="263" font-family="Hack-Regular, Hack" font-weight="normal" fill="#D08F52">- To remove the warning information, delete or remove the SVG files.</tspan>
+                    <tspan x="5.58984375" y="277" font-family="Hack-Regular, Hack" font-weight="normal" fill="#D08F52">- Visit </tspan>
+                    <tspan x="63.3867188" y="277" font-family="Hack-Regular, Hack" font-weight="normal" fill="#D08F52" text-decoration="underline">https://developer.mozilla.org/en-US/docs/Web/SVG</tspan>
+                    <tspan x="410.167969" y="277" font-family="Hack-Regular, Hack" font-weight="normal" fill="#D08F52"> know more about SVG.</tspan>
+                    <tspan x="561.884766" y="277" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
+                    <tspan x="5.58984375" y="291" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
+                    <tspan x="5.58984375" y="305" font-family="Hack-Regular, Hack" font-weight="normal" fill="#6A6F7A">07:48:36</tspan>
+                    <tspan x="63.3867188" y="305" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"> </tspan>
+                    <tspan x="70.6113281" y="305" fill="#4CD1E0">[astro-svg-sprite]</tspan>
+                    <tspan x="200.654297" y="305" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"> </tspan>
+                    <tspan x="207.878906" y="305" font-family="Hack-Regular, Hack" font-weight="normal" fill="#8CC265">generated</tspan>
+                    <tspan x="272.900391" y="305" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"> 'sprite.svg' 9.9951171875(kb).</tspan>
+                    <tspan x="5.58984375" y="319" font-family="Hack-Regular, Hack" font-weight="normal" fill="#6A6F7A">07:48:36 </tspan>
+                    <tspan x="70.6113281" y="319" fill="#4CD1E0">[astro]</tspan>
+                    <tspan x="121.183594" y="319" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"> </tspan>
+                    <tspan x="128.408203" y="319" font-family="Hack-Regular, Hack" font-weight="normal" fill="#8CC265">update</tspan>
+                    <tspan x="171.755859" y="319" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"> /public/assets/images/sprite.svg</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

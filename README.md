@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-<img height="142" alt="" src="https://github.com/ACP-CODE/astro-svg-sprite/assets/3423524/315d2628-d696-4906-b366-6dc87a179ca4">
+<img height="142" alt="" src="./preview/logo.svg">
 </div>
 
 <h1 align="center">astro-svg-sprite</h1>
@@ -77,7 +77,7 @@ or
 ```sh
 npm run build
 ```
-<img width="100%" alt="preview@2x" src="https://github.com/ACP-CODE/astro-svg-sprite/assets/3423524/ccb73a3a-588a-4a6c-91fc-288d00499dcd" >
+<img width="100%" alt="" src="./preview/astro-svg-sprite.svg" >
 
 The generated `sprite.svg` file will be stored in the `public/assets/images` directory.
 

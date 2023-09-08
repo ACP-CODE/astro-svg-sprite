@@ -8,7 +8,7 @@ export default function printWarnInfo() {
 
   if (invalidFiles.length > 0) {
 
-    console.log(`\n\x1b[42m pared ${fileNames.length} SVG ${fileForm(fileNames)} \x1b[0m`);
+    console.log(`\n\x1b[42m parsed ${fileNames.length} SVG ${fileForm(fileNames)} \x1b[0m`);
 
     // for (let i = 0; i < fileNames.length; i++) {
     //   const fileName = fileNames[i];
