@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-<p style="font-size:7rem">🪶</p>
+<img height="142" alt="" src="https://github.com/ACP-CODE/astro-svg-sprite/assets/3423524/315d2628-d696-4906-b366-6dc87a179ca4">
 </div>
 
 <h1 align="center">astro-svg-sprite</h1>
