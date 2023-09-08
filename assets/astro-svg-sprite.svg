@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="680px" height="375px" viewBox="0 0 680 375" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>#@1x</title>
-    <g id="#" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <title>astro-svg-sprite@1x</title>
+    <g id="astro-svg-sprite" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="##">
-            <style type="text/css">#bg { rx: 4.5px; }</style>
-            <rect id="bg" fill="#282C34" x="0" y="0" width="680" height="375"></rect>
+            <rect id="bg" fill="#282C34" x="0" y="0" width="680" height="375" rx="4"></rect>
             <g id="code" transform="translate(21.000000, 23.000000)">
                 <rect id="parsed" fill="#8CC265" x="0" y="126" width="152" height="16"></rect>
                 <rect id="asto" fill="#8CC265" x="41" y="28" width="43" height="16"></rect>
@@ -21,10 +20,14 @@
                     <tspan x="153.267578" y="39" font-family="Hack-Regular, Hack" font-weight="normal" fill="#6A6F7A">started in 3241ms</tspan>
                     <tspan x="281.675781" y="39" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
                     <tspan x="5.58984375" y="53" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF">  </tspan>
-                    <tspan x="5.58984375" y="67" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF">  ┃ Local    </tspan>
+                    <tspan x="5.58984375" y="67" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF">  </tspan>
+                    <tspan x="20.0390625" y="67" font-family="Hack-Regular, Hack" font-weight="normal" fill="#6A6F7A">┃</tspan>
+                    <tspan x="27.2636719" y="67" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"> Local    </tspan>
                     <tspan x="99.5097656" y="67" fill="#4CD1E0">http://localhost:3000/</tspan>
                     <tspan x="258.451172" y="67" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
-                    <tspan x="5.58984375" y="81" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF">  ┃ Network  </tspan>
+                    <tspan x="5.58984375" y="81" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF">  </tspan>
+                    <tspan x="20.0390625" y="81" font-family="Hack-Regular, Hack" font-weight="normal" fill="#6A6F7A">┃</tspan>
+                    <tspan x="27.2636719" y="81" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"> Network  </tspan>
                     <tspan x="99.5097656" y="81" font-family="Hack-Regular, Hack" font-weight="normal" fill="#6A6F7A">use --host to expose</tspan>
                     <tspan x="244.001953" y="81" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF"></tspan>
                     <tspan x="5.58984375" y="95" font-family="Hack-Regular, Hack" font-weight="normal" fill="#ABB2BF">  </tspan>
