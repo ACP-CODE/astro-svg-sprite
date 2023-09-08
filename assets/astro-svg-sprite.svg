@@ -3,7 +3,8 @@
     <title>#@1x</title>
     <g id="#" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="##">
-            <rect id="bg" fill="#282C34" x="0" y="0" width="680" height="375" rx="4"></rect>
+            <style type="text/css">#bg { rx: 4.5px; }</style>
+            <rect id="bg" fill="#282C34" x="0" y="0" width="680" height="375"></rect>
             <g id="code" transform="translate(21.000000, 23.000000)">
                 <rect id="parsed" fill="#8CC265" x="0" y="126" width="152" height="16"></rect>
                 <rect id="asto" fill="#8CC265" x="41" y="28" width="43" height="16"></rect>
