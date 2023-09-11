@@ -1,28 +1,26 @@
 <div align="center">
 
-**Welcome! 🎉  Check out the [release notes](./CHANGELOG.md) about new!**
+**Latest Updates! 🎉 See the [change log](./CHANGELOG.md) for details.**
 
-</div>
-
-<div align="center">
 <img height="142" alt="" src="./assets/logo.svg">
+
+# stro-svg-sprite
+
+A zero-dependency [Astro Integration](https://docs.astro.build/en/guides/integrations-guide/) that generates a sprite.svg from SVG files in your Astro project.
+
 </div>
-
-<h1 align="center">astro-svg-sprite</h1>
-
-<p align="center">A zero-dependency <a href="https://docs.astro.build/en/guides/integrations-guide/">Astro Integration</a> that generates a sprite.svg from SVG files in your Astro project.</p>
 
 ## Installation
 
-> The package depends on the Integrations API of Astro 2.0 and above
+> This package is compatible with Astro 2.0 and above, which support the Integrations API.
 
-Auto Install, use `astro add` command-line tool automates the installation for you. `npx`, `yarn` or `pnpm` any you like.
+To automate the installation, use the `astro add` command-line tool. You can initialize it via `npx`, `yarn`, or `pnpm` based on your preference.
 
 ```sh
 npx astro add astro-svg-sprite
 ```
 
-Manual Install, run this in the terminal.
+Alternatively, you can manually install it by running the following command in your terminal:
 
 ```sh
 npm install astro-svg-sprite
@@ -34,7 +32,7 @@ npm install astro-svg-sprite
 <summary id="#getting-started"><b>Getting Started</b></summary>
 <br>
 
-First, apply this integration to your `astro.config.*` file using the integrations property:
+Add astro-svg-sprite to your `astro.config.*` file:
 
 ```ts
 // astro.config.mjs
@@ -46,7 +44,7 @@ export default defineConfig({
 });
 ```
 
-Then, store the SVG files to be used for the generated `sprite.svg` in the `src/assets/images/sprite` directory.
+Store the SVG files to be used for the generated `sprite.svg` in the `src/assets/images/sprite` directory.
 
 ```
 /
@@ -66,7 +64,7 @@ Then, store the SVG files to be used for the generated `sprite.svg` in the `src/
 ├── package.json
 ```
 
-To generate `sprite.svg` file, run this in the terminal.
+Generating the `sprite.svg` on build:
 
 ```sh
 npm run dev
@@ -78,9 +76,33 @@ or
 npm run build
 ```
 
+The `sprite.svg` will be output to `public/assets/images` directory.
+
 <img width="100%" alt="" src="./assets/astro-svg-sprite.svg" >
 
-The generated `sprite.svg` file will be stored in the `public/assets/images` directory.
+To use the generated `sprite.svg` file, create a `Sprite` component at `components/Sprite.astro`:
+
+```astro
+---
+export interface props {
+  name: string;
+}
+
+const { class:className, name } = Astro.props;
+---
+<svg class={className}>
+  <use xlink:href=`${Astro.site}assets/images/sprite.svg#${name}`></use>
+</svg>
+```
+
+Then call the `Sprite.astro` component on other pages.
+
+```astro
+---
+import Sprite from 'components/Sprite.astro'
+---
+<Sprite name="fileName" class="customClassName"/>
+```
 
 </details>
 
@@ -116,6 +138,10 @@ export default defineConfig({
 > **Note:** `emitFile.compress` recommends using the default `standard` mode. The `best` mode will convert some svg tags into path tags.
 
 </details>
+
+## Need Help or Feedback?
+
+Submit your issues or feedback on our [GitHub](https://github.com/ACP-CODE/astro-svg-sprite/issues) channel.
 
 ## Changelog
 

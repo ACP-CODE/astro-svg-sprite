@@ -2,6 +2,19 @@
 
 All notable changes to the Astro Integration `astro-svg-sprite` will be documented in this file.
 
+## v1.0.3
+
+### Patch Changes
+
+- README - Addd an `issues` Chanel
+
+## v1.0.2
+
+### Patch Changes
+
+- Update README file
+- Export the logger utility directly from the utils module
+
 ## v1.0.1
 
 ### Patch Changes

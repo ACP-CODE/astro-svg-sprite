@@ -1,8 +1,6 @@
 import fs from '../paths';
 
-import { packageName } from "../data/pkg-name";
-import { Logger } from "../utils/logger";
-const logger = new Logger(packageName);
+import { logger } from '../utils';
 
 import { executionTime } from '..';
 import printWarnInfo from './printWarnInfo';

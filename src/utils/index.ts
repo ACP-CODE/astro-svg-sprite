@@ -1,3 +1,7 @@
+import { packageName } from "../data/pkg-name";
+import { Logger } from "./logger";
+export const logger = new Logger(packageName);
+
 export { default as extractAttributes } from './extractAttributes';
 export { default as extractSvgContent } from './extractSvgContent';
 export { default as hasSvgFilesInDirectory } from './hasSvgFilesInDirectory';
