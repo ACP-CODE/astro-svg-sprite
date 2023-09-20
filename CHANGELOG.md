@@ -2,6 +2,12 @@
 
 All notable changes to the Astro Integration `astro-svg-sprite` will be documented in this file.
 
+## v1.0.4
+
+### Patch Changes
+
+- Bug fixed
+
 ## v1.0.3
 
 ### Patch Changes
