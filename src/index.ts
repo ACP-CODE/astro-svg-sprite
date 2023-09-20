@@ -90,7 +90,6 @@ export default function svgSprite(astroConfig: PluginConfig = {}): AstroIntegrat
         if (astroConfig?.emitFile !== undefined || astroConfig?.emitFile === false ) {
           injectScript('page', `document.body.insertAdjacentHTML("beforeend", "${sprite}")`)
         }
-        console.log(astroConfig?.emitFile)
       },
       'astro:config:done': async ({ config: cfg }) => {
         config = cfg;
