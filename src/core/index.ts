@@ -4,3 +4,4 @@ export { default as getFileSize } from '../utils/getFileSize';
 export { default as writeFile } from './writeFile';
 export { default as optimizeSvgContent } from './optimizeSvgContent';
 export { default as printFileStats } from './printFileStats';
+export { default as vitePluginSvgSprite } from "./vitePluginSvgSprite";

@@ -1,7 +1,7 @@
 import type { AstroConfig, AstroIntegration } from 'astro';
 
 import { packageName } from './data/pkg-name';
-import { parseSvgs, generateSprite, optimizeSvgContent, writeFile, printFileStats } from './core';
+import { parseSvgs, generateSprite, optimizeSvgContent, writeFile, printFileStats, vitePluginSvgSprite } from './core';
 import { hasSvgFilesInDirectory, measureExecutionTime } from './utils';
 import { getEntryPath, getOutputPath } from './paths';
 
@@ -73,7 +73,7 @@ export default function svgSprite(astroConfig: PluginConfig = {}): AstroIntegrat
   function emitFile() {
     if (hasSvgFilesInDirectory(entry)) {
       if (astroConfig.emitFile || mergedConfig.emitFile) {
-        if(icons.length!==0){
+        if (icons.length !== 0) {
           writeFile(filePath, sprite);
         }
         if (mergedConfig.mode !== 'quiet') {
@@ -86,9 +86,9 @@ export default function svgSprite(astroConfig: PluginConfig = {}): AstroIntegrat
   return {
     name: packageName,
     hooks: {
-      'astro:config:setup': async ({ injectScript }) => {
-        if (astroConfig?.emitFile !== undefined || astroConfig?.emitFile === false ) {
-          injectScript('page', `document.body.insertAdjacentHTML("beforeend", "${sprite}")`)
+      'astro:config:setup': async ({ updateConfig, config }) => {
+        if (astroConfig?.emitFile !== undefined || astroConfig?.emitFile === false) {
+          updateConfig({ vite: { plugins: [vitePluginSvgSprite(sprite, config.compressHTML)] } });
         }
       },
       'astro:config:done': async ({ config: cfg }) => {
