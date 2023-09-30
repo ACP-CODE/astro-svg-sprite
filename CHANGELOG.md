@@ -8,7 +8,6 @@ All notable changes to the Astro Integration `astro-svg-sprite` will be document
 
 - Updated `emitFile:fasle` Option, now embeds `svg-sprite` code in `body` section.
 
-
 ## v1.0.5
 
 ### Patch Changes
